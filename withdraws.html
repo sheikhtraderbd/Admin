@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Withdrawals - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <nav class="sidebar" id="admin-sidebar"></nav>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Manage Withdrawals</h1>
+            </header>
+
+            <div class="content-box">
+                <h2>Pending Withdrawals</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>User Phone</th>
+                                <th>Amount (৳)</th>
+                                <th>Method</th>
+                                <th>Wallet Address</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pending-withdraws-table">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h2>Completed Withdrawals (Last 20)</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>User Phone</th>
+                                <th>Amount (৳)</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="completed-withdraws-table">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

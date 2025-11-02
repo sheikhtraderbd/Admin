@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Plans - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <nav class="sidebar" id="admin-sidebar"></nav>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Manage Plans</h1>
+                <button class="btn btn-primary" id="add-plan-btn"><i class="fas fa-plus"></i> Add New Plan</button>
+            </header>
+
+            <div class="content-box">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price (৳)</th>
+                                <th>Reward (৳)</th>
+                                <th>Validity (Days)</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="plans-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="plan-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-plan-modal">&times;</span>
+            <h2 id="plan-modal-title">Add New Plan</h2>
+            <form id="plan-form">
+                <input type="hidden" id="plan-id">
+                <div class="form-group">
+                    <label for="plan-name">Plan Name</label>
+                    <input type="text" id="plan-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan-price">Price</label>
+                    <input type="number" id="plan-price" step="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan-reward">Daily Reward</label>
+                    <input type="number" id="plan-reward" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan-validity">Validity (Days)</label>
+                    <input type="number" id="plan-validity" step="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Plan</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
